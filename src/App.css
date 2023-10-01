@@ -9,9 +9,101 @@
 }
 
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f7f7f7;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #bebebe;
+  background: #e3e3e3;
+}
+
+/*  spin animation */
+.spin{
+  animation: spin 0.5s infinite linear;
+}
+
+@keyframes spin{
+  0%{
+    rotate: 0deg;
+  }
+  100%{
+    rotate: 360deg;
+  }
+}
+
+.singleUserProfile{
+  height: 200px;
+  width: 200px;
+  transition: 0.4s cubic-bezier(1, -1, 0, 2);
+  border-radius: 50%;
+  overflow: hidden;
+  animation: blob 3s infinite linear;
+}
+
+@keyframes blob {
+  25%{
+    border-radius: 50% 50% 50% 27% / 50% 50% 50% 27% ;
+  }
+  50%{
+    border-radius: 50% 50% 27% 50% / 50% 50% 27% 50%;
+  }
+  75%{
+    border-radius: 50% 27% 50% 50% / 50% 27% 50% 50%;
+  }
+  90%{
+    border-radius: 27% 50% 50% 50% / 27% 50% 50% 50%;
+  }
+  100%{
+    border-radius: 50%;
+  }
+}
+
+.h-80{
+  height : 80%; 
+  border-radius: 50px;
+}
+
+.neomorphism1{
+ 
+  background: linear-gradient(145deg, #f1c02f, #ffcf0d);
+  box-shadow:  25px 25px 50px #cbcbcb,
+               -25px -25px 50px #ffffff;
+}
+.list{
+  min-height: 12%;
+  width: "98%";
+  cursor: "pointer";
+  margin-top: "2px";
+}
+
+.singleUser{
+  height: 75%;
+}
+
+.detailDiv{
+  height: 5vh;
+}
+
+@media only screen and (max-width : 750px){
+  .page{
+    min-height: 150vh;
+    overflow-y: scroll;
+  }
+  .h-99{
+      height: 100%;
+      border-radius: 0px;
+  }
+  #lists{
+      max-height: 50%;
+  }
+  #userListScrollDiv li{
+      min-height: 15%;
+      min-width: 100%;
+  }
+  .singleUser{
+    height: 80%;
+    min-width: 100%;
+  }
+  .detailDiv{
+    height: 5vh;
+  }
 }
